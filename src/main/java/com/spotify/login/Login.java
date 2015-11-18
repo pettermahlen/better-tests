@@ -1,6 +1,7 @@
 package com.spotify.login;
 
 import com.spotify.apollo.RequestContext;
+import com.spotify.apollo.Response;
 
 import static java.util.Objects.requireNonNull;
 
@@ -14,7 +15,7 @@ public class Login {
     this.userStore = requireNonNull(userStore);
   }
 
-  public String authenticate(RequestContext requestContext) {
-    return "FAILURE";
+  public Response<String> authenticate(RequestContext requestContext) {
+    return Response.forPayload("FAILURE");
   }
 }
