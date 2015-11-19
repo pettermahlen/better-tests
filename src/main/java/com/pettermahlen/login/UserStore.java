@@ -1,4 +1,4 @@
-package com.spotify.login;
+package com.pettermahlen.login;
 
 import java.util.Optional;
 

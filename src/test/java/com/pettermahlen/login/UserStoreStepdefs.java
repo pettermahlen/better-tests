@@ -1,12 +1,12 @@
-package com.spotify.login;
+package com.pettermahlen.login;
 
 import com.spotify.apollo.Response;
 
 import cucumber.api.java.en.Given;
 import okio.ByteString;
 
-import static com.spotify.login.CommonUtilities.encrypt;
-import static com.spotify.login.CommonUtilities.jsonRepresentation;
+import static com.pettermahlen.login.CommonUtilities.encrypt;
+import static com.pettermahlen.login.CommonUtilities.jsonRepresentation;
 
 public class UserStoreStepdefs {
   @Given("^a user with name \"([^\"]*)\" and password \"([^\"]*)\"$")

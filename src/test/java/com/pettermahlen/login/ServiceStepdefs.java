@@ -1,4 +1,4 @@
-package com.spotify.login;
+package com.pettermahlen.login;
 
 import com.spotify.apollo.Request;
 import com.spotify.apollo.Response;
@@ -10,8 +10,8 @@ import okio.ByteString;
 import static com.spotify.apollo.test.unit.ResponseMatchers.hasPayload;
 import static com.spotify.apollo.test.unit.ResponseMatchers.hasStatus;
 import static com.spotify.apollo.test.unit.StatusTypeMatchers.withCode;
-import static com.spotify.login.CommonUtilities.encrypt;
-import static com.spotify.login.CommonUtilities.withString;
+import static com.pettermahlen.login.CommonUtilities.encrypt;
+import static com.pettermahlen.login.CommonUtilities.withString;
 import static org.junit.Assert.assertThat;
 
 

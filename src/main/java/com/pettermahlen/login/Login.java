@@ -1,4 +1,4 @@
-package com.spotify.login;
+package com.pettermahlen.login;
 
 import com.spotify.apollo.RequestContext;
 import com.spotify.apollo.Response;

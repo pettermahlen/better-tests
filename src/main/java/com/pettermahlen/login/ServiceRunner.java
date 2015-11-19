@@ -1,4 +1,4 @@
-package com.spotify.login;
+package com.pettermahlen.login;
 
 import com.spotify.apollo.httpservice.HttpService;
 import com.spotify.apollo.httpservice.LoadingException;

@@ -7,7 +7,7 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <properties>
-    <apollo.runner>com.spotify.login.ServiceRunner</apollo.runner>
+    <apollo.runner>com.pettermahlen.login.ServiceRunner</apollo.runner>
     <maven.javadoc.skip>true</maven.javadoc.skip>
     <cucumber.version>1.2.4</cucumber.version>
     <apollo.version>1.0.0-rc3-foss-SNAPSHOT</apollo.version>

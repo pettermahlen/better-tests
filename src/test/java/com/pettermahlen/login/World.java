@@ -1,4 +1,4 @@
-package com.spotify.login;
+package com.pettermahlen.login;
 
 import com.spotify.apollo.test.ServiceHelper;
 import com.spotify.apollo.test.StubClient;

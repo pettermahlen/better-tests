@@ -1,4 +1,4 @@
-package com.spotify.login;
+package com.pettermahlen.login;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;

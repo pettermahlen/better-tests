@@ -1,4 +1,4 @@
-package com.spotify.login;
+package com.pettermahlen.login;
 
 import com.spotify.apollo.Environment;
 import com.spotify.apollo.route.Route;

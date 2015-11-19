@@ -1,4 +1,4 @@
-package com.spotify.login;
+package com.pettermahlen.login;
 
 import com.spotify.apollo.Request;
 import com.spotify.apollo.Response;
@@ -22,7 +22,7 @@ import java.util.Optional;
 import okio.ByteString;
 
 import static com.spotify.apollo.test.unit.RequestMatchers.uri;
-import static com.spotify.login.CommonUtilities.jsonRepresentation;
+import static com.pettermahlen.login.CommonUtilities.jsonRepresentation;
 import static java.util.stream.Collectors.toList;
 import static okio.ByteString.encodeUtf8;
 import static org.hamcrest.CoreMatchers.any;
