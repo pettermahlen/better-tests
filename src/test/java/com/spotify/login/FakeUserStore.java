@@ -2,6 +2,7 @@ package com.spotify.login;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * TODO: document!
@@ -18,7 +19,7 @@ public class FakeUserStore implements UserStore {
   }
 
   @Override
-  public User findByName(String userName) {
-    return users.get(userName);
+  public Optional<User> findByName(String userName) {
+    return Optional.ofNullable(users.get(userName));
   }
 }

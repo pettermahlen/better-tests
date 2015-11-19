@@ -6,7 +6,7 @@ import org.hamcrest.TypeSafeMatcher;
 
 import okio.ByteString;
 
-class PayloadMatchers {
+class CommonUtilities {
 
   static Matcher<ByteString> withString(String result) {
     return new TypeSafeMatcher<ByteString>() {
@@ -25,5 +25,13 @@ class PayloadMatchers {
         mismatchDescription.appendText("was ").appendText(item.utf8());
       }
     };
+  }
+
+  static String jsonRepresentation(String userName, String password) {
+    return String.format("{\"userName\": \"%s\", \"password\": \"%s\"}", userName, password);
+  }
+
+  static String encrypt(String cleartextPassword) {
+    return "crypto!" + cleartextPassword;
   }
 }

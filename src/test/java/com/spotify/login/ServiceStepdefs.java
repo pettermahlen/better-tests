@@ -10,7 +10,8 @@ import okio.ByteString;
 import static com.spotify.apollo.test.unit.ResponseMatchers.hasPayload;
 import static com.spotify.apollo.test.unit.ResponseMatchers.hasStatus;
 import static com.spotify.apollo.test.unit.StatusTypeMatchers.withCode;
-import static com.spotify.login.PayloadMatchers.withString;
+import static com.spotify.login.CommonUtilities.encrypt;
+import static com.spotify.login.CommonUtilities.withString;
 import static org.junit.Assert.assertThat;
 
 
@@ -20,7 +21,11 @@ public class ServiceStepdefs {
 
   @When("^a login attempt is made with \"([^\"]*)\" and \"([^\"]*)\"$")
   public void a_login_attempt_is_made_with_and(String userName, String cleartextPassword) throws Throwable {
-    final String uri = String.format("/login?user=%s&password=%s", userName, encrypt(cleartextPassword));
+    final String uri = String.format(
+        "/login?userName=%s&password=%s",
+        userName,
+        encrypt(cleartextPassword));
+
     response = World.serviceHelper()
         .request(Request.forUri(uri))
         .toCompletableFuture().get();
@@ -32,7 +37,4 @@ public class ServiceStepdefs {
     assertThat(response, hasPayload(withString(result)));
   }
 
-  private String encrypt(String cleartextPassword) {
-    return "crypto!" + cleartextPassword;
-  }
 }

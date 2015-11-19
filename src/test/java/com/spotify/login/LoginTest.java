@@ -73,7 +73,7 @@ public class LoginTest {
         client,
         ImmutableMap.<String, String>of());
 
-    assertThat(login.authenticate(requestContext), hasStatus(withCode(404)));
+    assertThat(login.authenticate(requestContext), hasStatus(withCode(400)));
   }
 
   @Test
@@ -85,7 +85,7 @@ public class LoginTest {
         client,
         ImmutableMap.<String, String>of());
 
-    assertThat(login.authenticate(requestContext), hasStatus(withCode(404)));
+    assertThat(login.authenticate(requestContext), hasStatus(withCode(400)));
   }
 
   private RequestContext loginAs(String userName, String password) {

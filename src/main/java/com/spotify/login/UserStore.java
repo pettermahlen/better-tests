@@ -1,9 +1,11 @@
 package com.spotify.login;
 
+import java.util.Optional;
+
 /**
  * TODO: document!
  */
 public interface UserStore {
 
-  User findByName(String userName);
+  Optional<User> findByName(String userName);
 }

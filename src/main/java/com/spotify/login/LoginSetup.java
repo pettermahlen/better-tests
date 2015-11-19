@@ -9,7 +9,7 @@ public final class LoginSetup {
   }
 
   public static void init(Environment environment) {
-    UserStore userStore = null;
+    UserStore userStore = new RemoteUserStore(environment.client());
     Login login = new Login(userStore);
 
     environment.routingEngine()
