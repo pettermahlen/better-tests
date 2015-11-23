@@ -46,27 +46,21 @@ public class LoginTest {
   public void shouldReturnSuccessForCorrectCredentials() throws Exception {
     userStore.addUser(User.create("petter", "super-encrypted"));
 
-    RequestContext requestContext = loginAs("petter", "super-encrypted");
-
-    assertThat(login.authenticate(requestContext), hasPayload(is("SUCCESS")));
+    assertThat(login.authenticate(as("petter", "super-encrypted")), hasPayload(is("SUCCESS")));
   }
 
   @Test
   public void shouldReturnFailureForBadCredentials() throws Exception {
     userStore.addUser(User.create("petter", "super-encrypted"));
 
-    RequestContext requestContext = loginAs("petter", "petter");
-
-    assertThat(login.authenticate(requestContext), hasPayload(is("FAILURE")));
+    assertThat(login.authenticate(as("petter", "petter")), hasPayload(is("FAILURE")));
   }
 
   @Test
   public void shouldReturnFailureForMissingUser() throws Exception {
     userStore.addUser(User.create("petter", "super-encrypted"));
 
-    RequestContext requestContext = loginAs("matti", "super-encrypted");
-
-    assertThat(login.authenticate(requestContext), hasPayload(is("FAILURE")));
+    assertThat(login.authenticate(as("matti", "super-encrypted")), hasPayload(is("FAILURE")));
   }
 
   @Test
@@ -93,7 +87,7 @@ public class LoginTest {
     assertThat(login.authenticate(requestContext), hasStatus(withCode(400)));
   }
 
-  private RequestContext loginAs(String userName, String password) {
+  private RequestContext as(String userName, String password) {
     Request request = Request.forUri(String.format(URI_BASE + "userName=%s&password=%s", userName, password));
     return RequestContexts.create(request, client, ImmutableMap.of());
   }

@@ -1,0 +1,9 @@
+1. Create login.feature and a test
+2. Make that work
+3. Walk through step definitions
+4. Walk through LoginTest
+ a) note attention to small methods
+ b) note moving code out into helpers
+5. Walk through RemoteUserStoreTest
+ a) note single responsibility even for two tests with same setup
+ b) note logging validation - sometimes, logging is important, but usually not
