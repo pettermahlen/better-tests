@@ -14,7 +14,9 @@ import static com.pettermahlen.login.CommonUtilities.encrypt;
 import static com.pettermahlen.login.CommonUtilities.withString;
 import static org.junit.Assert.assertThat;
 
-
+/**
+ * Definitions of test steps that interact with the login service API.
+ */
 public class ServiceStepdefs {
 
   Response<ByteString> response;

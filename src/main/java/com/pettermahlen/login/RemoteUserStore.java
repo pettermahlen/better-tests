@@ -19,7 +19,8 @@ import java.util.concurrent.ExecutionException;
 import okio.ByteString;
 
 /**
- * TODO: document!
+ * A user store that sends requests via an Apollo client to fetch user information. It would be a
+ * bit more realistic to look up data in some datastore, but this is easier to fake..
  */
 public class RemoteUserStore implements UserStore {
 
@@ -51,5 +52,10 @@ public class RemoteUserStore implements UserStore {
     } catch (InterruptedException | ExecutionException | IOException e) {
       throw Throwables.propagate(e);
     }
+  }
+
+  @Override
+  public User findExistingByName(String userName) throws NotFoundException {
+    throw new UnsupportedOperationException();
   }
 }

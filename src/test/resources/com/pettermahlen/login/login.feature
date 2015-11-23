@@ -1,3 +1,4 @@
+# Gherkin feature definition for Cucumber (https://cucumber.io/) tests
 Feature: basic authentication
 
   Scenario: successful login

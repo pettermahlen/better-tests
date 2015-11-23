@@ -4,7 +4,7 @@ import com.spotify.apollo.httpservice.HttpService;
 import com.spotify.apollo.httpservice.LoadingException;
 
 /**
- * TODO: document!
+ * Starts up the service
  */
 public class ServiceRunner {
 

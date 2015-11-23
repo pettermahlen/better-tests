@@ -19,12 +19,17 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 public class LoginTest {
-
   private static final String URI_BASE = "http://localhost/login?";
+
+  // the thing we'll be testing
   Login login;
 
+  // a fake, but functional user store.
   FakeUserStore userStore;
 
+  // Here, mocking is a good choice, because we never use this client in our tests.
+  // Mocking can be a good choice otherwise as well, but there is a danger of coupling your
+  // test code with the production code.
   @Mock
   Client client;
 

@@ -31,6 +31,7 @@ class CommonUtilities {
     return String.format("{\"userName\": \"%s\", \"password\": \"%s\"}", userName, password);
   }
 
+  // super-secret password encryption
   static String encrypt(String cleartextPassword) {
     return "crypto!" + cleartextPassword;
   }

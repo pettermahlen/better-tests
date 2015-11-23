@@ -3,6 +3,9 @@ package com.pettermahlen.login;
 import com.spotify.apollo.Environment;
 import com.spotify.apollo.route.Route;
 
+/**
+ * Does the necessary wiring/dependency injection and route setup.
+ */
 public final class LoginSetup {
   private LoginSetup() {
     // prevent instantiation

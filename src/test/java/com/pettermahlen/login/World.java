@@ -3,6 +3,9 @@ package com.pettermahlen.login;
 import com.spotify.apollo.test.ServiceHelper;
 import com.spotify.apollo.test.StubClient;
 
+/**
+ * Global test state.
+ */
 public class World {
   private static ServiceHelper serviceHelper;
   private static StubClient stubClient;
