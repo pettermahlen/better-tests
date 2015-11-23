@@ -21,7 +21,6 @@ public class ServiceStepdefs {
 
   Response<ByteString> response;
 
-  @When("^a login attempt is made with \"([^\"]*)\" and \"([^\"]*)\"$")
   public void a_login_attempt_is_made_with_and(String userName, String cleartextPassword) throws Throwable {
     final String uri = String.format(
         "/login?userName=%s&password=%s",
@@ -33,7 +32,6 @@ public class ServiceStepdefs {
         .toCompletableFuture().get();
   }
 
-  @Then("^the result is \"([^\"]*)\"$")
   public void the_result_is(String result) throws Throwable {
     assertThat(response, hasStatus(withCode(200)));
     assertThat(response, hasPayload(withString(result)));

@@ -12,7 +12,6 @@ import static com.pettermahlen.login.CommonUtilities.jsonRepresentation;
  * Definitions of test steps that manage the user store.
  */
 public class UserStoreStepdefs {
-  @Given("^a user with name \"([^\"]*)\" and password \"([^\"]*)\"$")
   public void a_user_with_name_and_password(String userName, String cleartextPassword) throws Throwable {
     String jsonUserData = jsonRepresentation(userName, encrypt(cleartextPassword));
 
