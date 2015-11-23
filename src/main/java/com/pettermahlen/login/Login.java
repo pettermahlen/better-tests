@@ -31,6 +31,9 @@ public class Login {
     final Optional<User> user = userStore.findByName(userName.get());
 
     if (!user.isPresent() || !user.get().password().equals(password.get())) {
+      // you could possibly argue that it's better to return 403 FORBIDDEN here, but that normally
+      // means that the resource is forbidden. In this case, the login resource is accessible, but
+      // the authentication failed.
       return Response.forPayload("FAILURE");
     }
 
