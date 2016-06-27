@@ -3,14 +3,14 @@
 
   <name>Testable login service</name>
   <groupId>com.spotify</groupId>
-  <artifactId>testable-login</artifactId>
+  <artifactId>better-tests</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <properties>
     <apollo.runner>com.pettermahlen.login.ServiceRunner</apollo.runner>
     <maven.javadoc.skip>true</maven.javadoc.skip>
     <cucumber.version>1.2.4</cucumber.version>
-    <apollo.version>1.0.0-rc3-foss-SNAPSHOT</apollo.version>
+    <apollo.version>1.1.0</apollo.version>
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

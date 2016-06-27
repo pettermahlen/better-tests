@@ -16,6 +16,6 @@ public final class LoginSetup {
     Login login = new Login(userStore);
 
     environment.routingEngine()
-        .registerRoute(Route.sync("GET", "/login", login::authenticate));
+        .registerAutoRoute(Route.sync("GET", "/login", login::authenticate));
   }
 }
