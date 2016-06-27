@@ -7,3 +7,16 @@
 5. Walk through RemoteUserStoreTest
  a) note single responsibility even for two tests with same setup
  b) note logging validation - sometimes, logging is important, but usually not
+
+
+API:
+
+/login?userName=<username>&password=<encrypted password>
+=> SUCCESS/FAILURE
+
+Users are stored in a remote UserStore, which returns this:
+
+{
+  "userName" : <name>,
+  "password" : <encrypted password>
+}
